@@ -13,16 +13,16 @@ function header() {
     const header = document.createElement("div");
     const h1 = document.createElement("h1");
     header.classList.add("header");
-    h1.textContent = "Odin Restaurant";
+    h1.textContent = "ODIN RESTAURANT";
 
     const ul = document.createElement("ul");
     const home = document.createElement("li");
     const menu = document.createElement("li");
     const contact = document.createElement("li");
 
-    home.textContent = "Home";
-    menu.textContent = "Menu";
-    contact.textContent = "Contact";
+    home.textContent = "HOME";
+    menu.textContent = "MENU";
+    contact.textContent = "CONTACT";
 
     home.classList.add("home");
     menu.classList.add("menu");

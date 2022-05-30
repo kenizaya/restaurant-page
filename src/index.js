@@ -9,8 +9,13 @@ pageLoad();
 const homePage = document.querySelector(".home");
 const menuPage = document.querySelector(".menu");
 const contactPage = document.querySelector(".contact");
-const content = document.querySelector("#content");
 const contentContainer = document.querySelector(".content-container");
+const h1 = document.querySelector("h1");
+
+h1.addEventListener('click', () => {
+    contentContainer.innerHTML = "";
+    home();
+})
 
 homePage.addEventListener('click', () => {
     contentContainer.innerHTML = "";
