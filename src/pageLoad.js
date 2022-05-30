@@ -32,23 +32,27 @@ function header() {
     header.append(h1, ul);
     ul.append(home, menu, contact);
 
-    home.addEventListener('click', () => {
-        home.style.color = "#8D2B0B";
-        menu.style.color = "#222222";
-        contact.style.color = "#222222";
-    });
+    const li = document.querySelectorAll("li");
 
-    menu.addEventListener('click', () => {
-        menu.style.color = "#8D2B0B";
-        home.style.color = "#222222";
-        contact.style.color = "#222222";
-    });
 
-    contact.addEventListener('click', () => {
-        contact.style.color = "#8D2B0B";
-        home.style.color = "#222222";
-        menu.style.color = "#222222";
-    });
+    const toggleColors = (event)=>{
+        // go through each thing in the li array...
+        li.forEach( (element)=>{
+          // if this particular li array thing is the clicked one,
+          if(element===event.currentTarget){
+            // set it to the active color.
+            element.style.color="#8D2B0B";
+          } else {
+            // if not, set it to the inactive color.
+            element.style.color="#222222";
+          }
+        });
+      }
+      
+      li.forEach((link) => {
+        // if we don't specify what we want to do the listening, what is doing it?
+        link.addEventListener("click", toggleColors);
+      })
 
     const contentContainer = document.createElement("div");
     contentContainer.classList.add("content-container");
