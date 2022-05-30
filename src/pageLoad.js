@@ -1,11 +1,8 @@
-import BG from "../src/bg.jpg";
+import BG from "./bg.jpg";
 
 export function pageLoad() {
-    const body = document.querySelector("body");
-
-    const content = document.createElement("div");
-    content.classList.add("content");
-    body.appendChild(content);
+    const content = document.getElementById("content");
+    console.log("Hello");
 
     // Add Header 
     const header = document.createElement("div");
@@ -13,8 +10,22 @@ export function pageLoad() {
     header.classList.add("header");
     h1.textContent = "Odin Restaurant";
 
+    const ul = document.createElement("ul");
+    const home = document.createElement("li");
+    const menu = document.createElement("li");
+    const contact = document.createElement("li");
+
+    home.textContent = "Home";
+    menu.textContent = "Menu";
+    contact.textContent = "Contact";
+
+    home.classList.add("home");
+    menu.classList.add("menu");
+    contact.classList.add("contact");
+
     content.appendChild(header);
-    header.appendChild(h1);
+    header.append(h1, ul);
+    ul.append(home, menu, contact);
 
     // Add background to content, below header
     const bg = new Image();

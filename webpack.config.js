@@ -2,12 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        bundle: path.resolve(__dirname, './src/index.js'),
+    },
     devtool: 'inline-source-map',
     output: {
-        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        filename: '[name].[contenthash].js',
         clean: true,
+        assetModuleFilename: '[name][ext]',
     },
     module: {
         rules: [
@@ -26,6 +29,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Restaurant",
             filename: "index.html",
+            template: "src/template.html",
         }),
-    ]
+    ],
 };
