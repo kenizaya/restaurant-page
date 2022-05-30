@@ -1,9 +1,8 @@
-import BG from "./bg.jpg";
+import BG from "./assets/bg.jpg";
 
 function pageLoad() {
     header();
-    home();
-    
+    home();   
 }
 
 function header() {

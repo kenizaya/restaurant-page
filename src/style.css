@@ -55,9 +55,16 @@ p {
     font-size: 0.834rem;
 }
 
+/* 
+.dish {
+    width: 25%;
+} */
+
+
 
 /* Contact Page */
-.info {
+.info,
+.menu-container {
     background-color: bisque;
     width: 60%;
     margin: 3rem auto;
@@ -70,4 +77,16 @@ p {
 
 .info p {
     font-size: 18px;
+}
+
+.menu-container {
+    flex-direction: row;
+    flex: .5;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.dish {
+    width: 40%;
+
 }
