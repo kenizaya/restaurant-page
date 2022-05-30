@@ -2,12 +2,12 @@ import BG from "./assets/bg.jpg";
 
 function pageLoad() {
     header();
-    home();   
+    home();
+    footer();
 }
 
 function header() {
     const content = document.getElementById("content");
-    console.log("Hello");
 
     // Add Header 
     const header = document.createElement("div");
@@ -117,6 +117,18 @@ function home() {
     tp2.prepend(span2);
 
     timing.append(rh2, tp1, tp2);
+}
+
+function footer() {
+    const footer = document.createElement("div");
+    footer.classList.add("footer");
+    const a = document.createElement("a")
+    a.href = "https://github.com/kenizaya/";
+    a.text = "kenizaya";
+    footer.textContent = `Copyright © 2022 `;
+    footer.appendChild(a);
+
+    document.getElementById("content").appendChild(footer);
 }
 
 export {pageLoad, home};
