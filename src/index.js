@@ -13,21 +13,27 @@ const contentContainer = document.querySelector(".content-container");
 const h1 = document.querySelector("h1");
 
 h1.addEventListener('click', () => {
-    contentContainer.innerHTML = "";
+    empty(contentContainer);
     home();
 })
 
 homePage.addEventListener('click', () => {
-    contentContainer.innerHTML = "";
+    empty(contentContainer);
     home();
 });
 
 menuPage.addEventListener('click', () => {
-    contentContainer.innerHTML = "";
+    empty(contentContainer);
     menu();
 })
 
 contactPage.addEventListener('click', () => {
-    contentContainer.innerHTML = "";
+    empty(contentContainer);
     contact();
 })
+
+const empty = (el)=>{
+    while(el.firstChild){
+      el.removeChild(el.firstChild);
+    }
+  } 

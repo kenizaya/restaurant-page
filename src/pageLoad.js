@@ -32,6 +32,24 @@ function header() {
     header.append(h1, ul);
     ul.append(home, menu, contact);
 
+    home.addEventListener('click', () => {
+        home.style.color = "#8D2B0B";
+        menu.style.color = "#222222";
+        contact.style.color = "#222222";
+    });
+
+    menu.addEventListener('click', () => {
+        menu.style.color = "#8D2B0B";
+        home.style.color = "#222222";
+        contact.style.color = "#222222";
+    });
+
+    contact.addEventListener('click', () => {
+        contact.style.color = "#8D2B0B";
+        home.style.color = "#222222";
+        menu.style.color = "#222222";
+    });
+
     const contentContainer = document.createElement("div");
     contentContainer.classList.add("content-container");
     content.appendChild(contentContainer);
