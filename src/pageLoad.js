@@ -1,6 +1,12 @@
 import BG from "./bg.jpg";
 
-export function pageLoad() {
+function pageLoad() {
+    header();
+    home();
+    
+}
+
+function header() {
     const content = document.getElementById("content");
     console.log("Hello");
 
@@ -27,10 +33,20 @@ export function pageLoad() {
     header.append(h1, ul);
     ul.append(home, menu, contact);
 
+    const contentContainer = document.createElement("div");
+    contentContainer.classList.add("content-container");
+    content.appendChild(contentContainer);
+}
+
+
+
+function home() {
+    const contentContainer = document.querySelector(".content-container");
+
     // Add background to content, below header
     const bg = new Image();
     bg.src = BG;
-    content.appendChild(bg);
+    contentContainer.appendChild(bg);
 
 
     // Add divs for main content below image
@@ -42,7 +58,7 @@ export function pageLoad() {
     left.classList.add("left");
     right.classList.add("right");
 
-    content.appendChild(main);
+    contentContainer.appendChild(main);
     main.appendChild(left);
     main.appendChild(right);
 
@@ -104,3 +120,4 @@ export function pageLoad() {
     timing.append(rh2, tp1, tp2);
 }
 
+export {pageLoad, home};

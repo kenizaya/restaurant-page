@@ -27,6 +27,7 @@ ul {
 li {
     background-color: bisque;
     padding: 20px 14%;
+    cursor: pointer;
 }
 
 img {
@@ -52,4 +53,21 @@ span {
 }
 p {
     font-size: 0.834rem;
+}
+
+
+/* Contact Page */
+.info {
+    background-color: bisque;
+    width: 60%;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem;
+}
+
+.info p {
+    font-size: 18px;
 }
