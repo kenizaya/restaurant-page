@@ -5,17 +5,17 @@ I was allowed to have one div id=content, in template.
 Using webpack was a hassle in the start, but I understand it's worth.
 
 
-**Tech Used:
-**
-HTML
+**Tech Used:**
 
-CSS
+- HTML
 
-Javascript
+- CSS
 
-Webpack
+- Javascript
 
-NPM
+- Webpack
+
+- NPM
 
 
 **Lessons Learn't:
@@ -24,7 +24,8 @@ NPM
 **Live Demo:** https://kenizaya.github.io/restaurant-page/
 
 
-![Restaurant](https://user-images.githubusercontent.com/104677763/171042805-7e457f45-7c30-4533-ba67-e6367ebf202d.png)
+![Restaurant (4)](https://user-images.githubusercontent.com/104677763/171081668-14161b51-01ac-4aec-b685-dc634ea3a02f.png)
+
 
 ![Restaurant (2)](https://user-images.githubusercontent.com/104677763/171043431-32a9b95c-8363-4acd-9418-feeab6c63ea8.png)
 
